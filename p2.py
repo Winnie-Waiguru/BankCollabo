@@ -30,6 +30,6 @@ class Account:
             return f"Amount must be greater than zero"
         else:    
             self.balance-=(amount +self.transaction)
-            self.withdrawals.append({"date":self.date.strftime('%c'), "amount":amount,"narration":"Withdrawn"})
+            self.withdrawals.append({ "amount":amount,"narration":"Withdrawn"})
             return f"You withdrew {amount} and the transaction cost was {self.transaction}.Your new balane is {self.balance}"
         
