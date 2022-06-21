@@ -10,8 +10,8 @@ class Account:
         self.withdrawals=[]
         self.transaction= 100
         self.date=datetime.now()
-        self.loan_balance=0
         
+         
 
         
     def deposit(self,amount):
@@ -19,7 +19,7 @@ class Account:
             return f"Deposit amount should be more than zero"
         else:
             self.balance += amount
-            self.deposits.append({"date":self.date.strftime('%c'), "amount":amount,"narration":"deposit"})
+            self.deposits.append({"date":self.date, "amount":amount,"narration":"deposit"})
             return f"You deposited {amount}.Your new balance is {self.balance}"
              
     
