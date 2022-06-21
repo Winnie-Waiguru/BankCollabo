@@ -21,5 +21,12 @@ class Account:
             self.balance += amount
             self.deposits.append({"date":self.date, "amount":amount,"narration":"deposit"})
             return f"You deposited {amount}.Your new balance is {self.balance}"
+    def deposit(self,amount):
+        if amount <=0:
+            return f"Deposit amount should be more than zero"
+        else:
+            self.balance += amount
+            self.deposits.append({"date":self.date.strftime('%c'), "amount":amount,"narration":"deposit"})
+            return f"You deposited {amount}.Your new balance is {self.balance}"
              
     
